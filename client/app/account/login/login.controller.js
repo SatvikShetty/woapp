@@ -5,7 +5,7 @@ angular.module('workspaceApp')
     $scope.user = {};
     $scope.errors = {};
 
-    $scope.login = function(form) {
+  $scope.login = function(form) {
       $scope.submitted = true;
 
       if(form.$valid) {
