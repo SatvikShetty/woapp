@@ -18,8 +18,17 @@ angular.module('workspaceApp')
           id:'me'
         }
       },
-      update: {
-        method: 'PUT'
+      updaterole: {
+        method: 'PUT',
+        params: {
+          controller:'Role'
+        }
+      },
+      updateworole: {
+        method: 'PUT',
+        params: {
+          controller:'WORole'
+        }
       }
 	  });
   });

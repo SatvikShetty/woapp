@@ -6,13 +6,12 @@ angular.module('workspaceApp')
     // Use the User $resource to fetch all users
     $scope.users = User.query();
     
-    // $scope.update = function(user) {
-    //   User.update({ id: user._id }, {
-    //       attribute: "workorderrole",
-    //       value: user.workorderrole
-    //     });
+    $scope.update = function(user) {
+      User.updateworole({ id: user._id }, {
+          workorderrole: user.workorderrole
+        });
     
-    // };
+     };
     
     
   });

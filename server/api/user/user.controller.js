@@ -64,11 +64,26 @@ exports.destroy = function(req, res) {
 *Updates a user
 *restriction:'admin'
 */
-exports.update=function(req,res){
+exports.updateRole=function(req,res){
   var userId=req.params.id;
   var newrole=String(req.body.role);
   
   User.findByIdAndUpdate(userId, {role : newrole}, function (err, user) {
+      if(err) return res.send(500, err);
+    return res.send(204);
+  });
+  
+};
+
+/**
+*Updates a user
+*restriction:'woadmin'
+*/
+exports.updateWORole=function(req,res){
+  var userId=req.params.id;
+  var newrole=String(req.body.workorderrole);
+  
+  User.findByIdAndUpdate(userId, {workorderrole : newrole}, function (err, user) {
       if(err) return res.send(500, err);
     return res.send(204);
   });

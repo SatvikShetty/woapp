@@ -16,7 +16,7 @@ angular.module('workspaceApp')
     };
     
      $scope.update = function(user) {
-      User.update({ id: user._id }, {
+      User.updaterole({ id: user._id }, {
           role: user.role
         });
     
