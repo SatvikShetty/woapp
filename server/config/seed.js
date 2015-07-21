@@ -17,6 +17,7 @@ User.find({}).remove(function() {
   }, {
     provider: 'local',
     role: 'admin',
+    workorderrole:'woadmin',
     name: 'Admin',
     email: 'admin@admin.com',
     password: 'admin'

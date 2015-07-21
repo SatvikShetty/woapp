@@ -11,6 +11,10 @@ var UserSchema = new Schema({
     type: String,
     default: 'user'
   },
+  workorderrole: {
+    type: String,
+    default: 'worker'
+  },
   hashedPassword: String,
   provider: String,
   salt: String
