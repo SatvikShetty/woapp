@@ -1,3 +1,15 @@
-<div class="col-md-12">
-This is the workorderadmin view.
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="user in users">
+        <strong>{{user.name}}</strong><br>
+        <span class="text-muted">{{user.email}}</span><br>
+        <p>
+          <input id="worole" ng-change="update(user)" style="margin-left:0px" type="radio" ng-model="user.workorderrole" value="woadmin"> Workorder Admin
+          <input id="worole" ng-change="update(user)" type="radio" ng-model="user.workorderrole" value="creator"> Creator
+          <input id="worole" ng-change="update(user)" type="radio" ng-model="user.workorderrole" value="worker"> Worker
+        </p>
+    </li>
+  </ul>
 </div>

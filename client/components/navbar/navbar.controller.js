@@ -10,6 +10,7 @@ angular.module('workspaceApp')
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
+    $scope.isWoadmin = Auth.isWoadmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
     $scope.logout = function() {

@@ -135,6 +135,14 @@ angular.module('workspaceApp')
       isAdmin: function() {
         return currentUser.role === 'admin';
       },
+      /**
+       * Check if a user is an work order admin
+       *
+       * @return {Boolean}
+       */
+      isWoadmin: function() {
+        return currentUser.workorderrole === 'woadmin';
+      },
 
       /**
        * Get auth token
