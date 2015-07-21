@@ -20,7 +20,17 @@ User.find({}).remove(function() {
     name: 'Admin',
     email: 'admin@admin.com',
     password: 'admin'
-  }, function() {
+  }, {
+    provider: 'local',
+    name: 'Satvik',
+    email: 'skshetty@indiana.edu',
+    password: '1234'
+  }, {
+    provider: 'local',
+    name: 'Mike',
+    email: 'mike@39dn.com',
+    password: '1234'
+  },function() {
       console.log('finished populating users');
     }
   );

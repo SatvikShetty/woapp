@@ -58,6 +58,32 @@ exports.destroy = function(req, res) {
   });
 };
 
+
+/**
+*Updates a user
+*restriction:'admin'
+*/
+exports.update=function(req,res){
+  var userId=req.params.id;
+  var newrole=String(req.body.role);
+  console.log("The roles arrived"+newrole+userId);
+  
+  // User.findById(userId, function (err, user) {
+  //     user.role = newrole;
+  //     user.save(function(err) {
+  //       if (err) return validationError(res, err);
+  //       res.send(200);
+  //     });
+  // });
+  
+  User.findByIdAndUpdate(userId, {role : newrole}, function (err, user) {
+      if(err) return res.send(500, err);
+    console.log(user);
+    return res.send(204);
+  });
+  
+};
+
 /**
  * Change a users password
  */
